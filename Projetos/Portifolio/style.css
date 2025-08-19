@@ -32,6 +32,7 @@ section {
     max-width: 1200px;
 }
 
+/*Parte superior fixa*/
 .header {
     position: fixed;
     top: 0;
@@ -86,9 +87,11 @@ section {
 
 .btn:hover {
     padding: 1.5rem 6rem;
+    letter-spacing: 0.3rem;
 
 }
 
+/*Base com imagem e centro do site*/
 .home-container {
     background: url("./img/Design\ sem\ nome\ \(3\).png");
     background-position: center;
@@ -96,8 +99,8 @@ section {
     background-repeat: no-repeat;
     flex-wrap: wrap; 
     gap: 20px;
-
 }
+
 
 .home-container section {
     height: 100vh;
@@ -125,11 +128,13 @@ section {
     width: 600px;
 }
 
+/*Conteudo da segunda parte do site -Sobre */
 .Title {
     text-align: center;
     font-size: 7rem;
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 4rem;
 }
 
 .Title span{
@@ -143,8 +148,89 @@ section {
     color: #ffffff;
     font-size: 4rem;
     background-color: var(--cinza-mais-escuro);
-    gap: 6rem;
+    gap: 5rem;
+    background-size: cover;
+    height: 714px;
 }
+
 .sobre .conteudo-sobre-nos h3 {
-    font-size: 7rem;
+    font-size: 5rem;
+    max-width: 700px;
+    color: #fff;
+    max-width: 714px;
+}
+
+.sobre .conteudo-sobre-nos p {
+    font-size: 2rem;
+    color: #fff;
+    padding: 2rem 0;
+    line-height: 1.8;
+    padding-right: 15px;
+    max-height: 714px;
+    max-width: 513px;
+
+}
+
+.sobre .container-img {
+    display: block;
+    width: 600px;
+    height:714px;
+}
+
+/* Conteudo terceira parte do site- Produtos*/
+
+.produtos .container-prod {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.produtos .container-prod .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+}
+
+.produtos .container-prod .box:hover {
+    background: #cecece;
+}
+
+.produtos .container-prod .box h3 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.produtos .container-prod .box .preco {
+    color:#fff;
+    font-size: 3rem;
+}
+
+.produtos .container-prod .box .preco span {
+    padding: 1rem;
+    color:#6c6c6c;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.produtos .container-prod .box:hover>*{
+    color: #000000;
+}
+
+.produtos .btn1 {
+    background: #e2d693;
+    padding: 1rem 5rem;
+    color:#000000;
+    text-align: center;
+    font-size: 3rem;
+    max-width: 1000rem;
+    cursor: pointer;
+    width: 50rem;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.produtos .btn1:hover {
+    padding: 1.5rem 5.5rem 1.5rem;
 }
