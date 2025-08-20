@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio de Henry</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu com Hover</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Container principal */
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Botão principal */
+    .menu > button {
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* Efeito ao passar o mouse */
+    .menu > button:hover {
+      background-color: #45a049;
+    }
+
+    /* Container dos links */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Cada link */
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s;
+    }
+
+    /* Efeito nos links ao passar o mouse */
+    .dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Mostra o dropdown quando o mouse passa */
+    .menu:hover .dropdown {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <div class="menu">
+    <button>Mais opções</button>
+    <div class="dropdown">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+    </div>
+  </div>
+
 </body>
 </html>
