@@ -4,7 +4,7 @@
     --cinza-bem-escuro: #171718;
     --cinza-bem-claro: #cecece;
     --branco: #fff;
-    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    --border: 0.2rem solid rgb(156, 152, 152);
     font-size: 10px;
     --amarelinho: #e2d693;
 
@@ -21,6 +21,11 @@
     font-family: "Poppins", sans-serif;
     background-repeat: no-repeat;
 } 
+
+::selection {
+    background-color: #fff;
+    color: #000000;
+}
 
 body {
     background-color: var(--black);
@@ -226,27 +231,108 @@ section {
     margin: 0 auto;
     margin-top: 3rem;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .produtos .btn1:hover {
     padding: 1.5rem 5.5rem 1.5rem;
 }
 
+
+/*Área de Créditos*/
+.creditos {
+    display: flex;
+    align-items: stretch;
+    color: #cecece;
+    flex: 1;
+    gap: 150px;
+}
+.creditos h1 {
+    font-size: 17px;
+}
+.creditos a, p{
+    font-size: 15px;
+}
+
+.creditos .cont .navegaçao a {
+    color: #fff;
+}
+
+.creditos .cont .navegaçao a:hover {
+    border-bottom: 0.2rem solid var(--cinza-bem-claro);
+}
+
+.creditos .contato .conteudo3 img{
+    vertical-align: middle;
+}
+
+.creditos .contato .conteudo3 p{
+    padding-left: 10px;
+    display: inline-block;
+}
+.creditos .contato .conteudo3 a {
+    color: #fff;
+}
+
+.creditos .contato .conteudo3 a:hover {
+    border-bottom: var(--border);
+}
+
+.creditos .redes-sociais {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.final {
+    display: flex;
+    color: #fff;
+    align-items: stretch;
+    gap: 400px;
+}
+
+.final .feito-por {
+    display: flex;
+    align-items: stretch;
+}
+
+.final .feito-por a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.final .feito-por a:hover {
+    border-bottom: var(--border);
+}
+
+/*Whatsapp Logo-acess*/
+.whatss-logo {
+    z-index: 100;
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+}
+
 /*Área de login*/
+
+body.login {
+    background: #fff;
+}
 
 .container-login {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items:start;
     height: 100vh;
-    color: #fff;
-    margin-top: 0;
+    color: #000000;
+   margin-top: 15rem;
 }
 
 .container-login h1 {
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .container-login h2 {
@@ -254,32 +340,63 @@ section {
     margin-bottom: 2px;
 }
 
-.container-login .text-box input {
+.container-login .text-box input{
     background: #fff;
     border: none;
     border-radius: 5px;
-    width: 60rem;
-    height: 50px;
-    margin-bottom: 3rem;
+    width: 70rem;
+    height: 60px;
+    border: 2px solid #6c6c6c;
+    padding-left: 20px;
 }
 
-.container-login .text-box input::placeholder {
-    color: #000000;
+.container-login .esqueci-link { 
+    color: #171718;
+    font-size: 15.5px;
+    font-weight: bold;
 }
 
-.container-login label{
-    accent-color: #fff;
+.container-login .text-box .email {
+    margin-bottom: 30px;
+}
+
+.container-login .text-box .password {
+    margin-bottom: 0px;
+}
+
+.container-login .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 72.3rem;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.container-login .btn:hover {
+    background: #e2ddbe;
+    letter-spacing: normal;
+}
+ 
+.container-login p {
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    justify-content:center;
     font-size: 20px;
 }
 
-.container-login label input {
-    accent-color: #fff;
-    transform: scale(1.8);
-    border-radius: 6px;
-    margin-right: 5px;
+.container-login p a {
+    font-weight: bold;
+    color: #222224;
+    padding-left: 10px;
 }
 
-.container-login label a {
-    text-align: right;
-    color: #fff;
-}
+#pagina-login {
+    color: #000000;
+} 
+
+#pagina-login a {
+    color: #000000;
+} 
