@@ -20,7 +20,7 @@
     transition: 0.2s linear;
     font-family: "Poppins", sans-serif;
     background-repeat: no-repeat;
-} 
+}
 
 ::selection {
     background-color: #fff;
@@ -35,6 +35,14 @@ section {
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
+}
+
+input::placeholder {
+    font-size: 17px;
+}
+
+input {
+    font-size: 17px;
 }
 
 /*Parte superior fixa*/
@@ -99,7 +107,7 @@ section {
 .home-container {
     background: url("./img/Design\ sem\ nome\ \(3\).png");
     background-position: center;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -107,7 +115,7 @@ section {
 .home-container section {
     height: 100vh;
     display: flex;
-    align-items:center;
+    align-items: center;
     margin: 50px;
     min-height: 100vh;
 }
@@ -122,7 +130,7 @@ section {
 }
 
 .conteudo p {
-    color: #ffffff ;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.8;
@@ -139,7 +147,7 @@ section {
     margin-bottom: 4rem;
 }
 
-.Title span{
+.Title span {
     color: var(--amarelinho);
     text-transform: uppercase;
 }
@@ -176,7 +184,7 @@ section {
 .sobre .container-img {
     display: block;
     width: 600px;
-    height:714px;
+    height: 714px;
 }
 
 /* Conteudo terceira parte do site- Produtos*/
@@ -203,25 +211,25 @@ section {
 }
 
 .produtos .container-prod .box .preco {
-    color:#fff;
+    color: #fff;
     font-size: 3rem;
 }
 
 .produtos .container-prod .box .preco span {
     padding: 1rem;
-    color:#6c6c6c;
+    color: #6c6c6c;
     text-decoration: line-through;
     font-weight: lighter;
 }
 
-.produtos .container-prod .box:hover>*{
+.produtos .container-prod .box:hover>* {
     color: #000000;
 }
 
 .produtos .btn1 {
     background: #e2d693;
     padding: 1rem 5rem;
-    color:#000000;
+    color: #000000;
     text-align: center;
     font-size: 3rem;
     max-width: 1000rem;
@@ -247,10 +255,13 @@ section {
     flex: 1;
     gap: 150px;
 }
+
 .creditos h1 {
     font-size: 17px;
 }
-.creditos a, p{
+
+.creditos a,
+p {
     font-size: 15px;
 }
 
@@ -262,14 +273,15 @@ section {
     border-bottom: 0.2rem solid var(--cinza-bem-claro);
 }
 
-.creditos .contato .conteudo3 img{
+.creditos .contato .conteudo3 img {
     vertical-align: middle;
 }
 
-.creditos .contato .conteudo3 p{
+.creditos .contato .conteudo3 p {
     padding-left: 10px;
     display: inline-block;
 }
+
 .creditos .contato .conteudo3 a {
     color: #fff;
 }
@@ -315,17 +327,22 @@ section {
 
 /*Área de login*/
 
+body.login ::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 body.login {
     background: #fff;
 }
 
 .container-login {
     display: flex;
-    justify-content:center;
-    align-items:start;
+    justify-content: center;
+    align-items: start;
     height: 100vh;
     color: #000000;
-   margin-top: 15rem;
+    margin-top: 15rem;
 }
 
 .container-login h1 {
@@ -340,17 +357,66 @@ body.login {
     margin-bottom: 2px;
 }
 
-.container-login .text-box input{
+.text-box {
+    position: relative;
+    width: 100%;         
+    max-width: 300px;
+}
+
+.container-login .text-box input {
     background: #fff;
     border: none;
     border-radius: 5px;
     width: 70rem;
     height: 60px;
     border: 2px solid #6c6c6c;
+    outline: none;
     padding-left: 20px;
+    transition: border-color 0.3s;
 }
 
-.container-login .esqueci-link { 
+.text-box input:focus {
+    border-color: #007bff;
+}
+
+.text-box input.valid {
+    border-color: #007bff;
+}
+
+.text-box input.invalid{
+    border-color: red;
+}
+
+.text-box i {
+    position: absolute;
+    overflow: visible;
+    right: -400px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.text-box i:hover {
+    color: #007bff;
+}
+
+.container-cad .text-box input.error {
+    border-color: red;
+}
+
+.container-cad .text-box input:focus {
+    border-color: #007bff;
+}
+
+.container-cad .text-box i:hover {
+    color: #007bff;
+}
+
+.container-login .esqueci-link {
     color: #171718;
     font-size: 15.5px;
     font-weight: bold;
@@ -378,12 +444,12 @@ body.login {
     background: #e2ddbe;
     letter-spacing: normal;
 }
- 
+
 .container-login p {
     display: flex;
     padding-top: 30px;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     font-size: 20px;
 }
 
@@ -395,8 +461,99 @@ body.login {
 
 #pagina-login {
     color: #000000;
-} 
+}
 
 #pagina-login a {
     color: #000000;
-} 
+}
+
+/*Área de Registrar-se*/
+
+body.cad ::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.cad {
+    background: #fff;
+}
+
+.container-cad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.container-cad h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.container-cad h2 {
+    font-size: 20px;
+}
+
+.container-cad .text-box input {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 70rem;
+    height: 60px;
+    border: 2px solid #6c6c6c;
+    padding-left: 20px;
+    margin-bottom: 30px;
+
+}
+.container-cad .text-box i {
+    position: absolute;
+    overflow: visible;
+    right: -400px;
+    top: 33px;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.container-cad .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 72.3rem;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.container-cad .btn:hover {
+    background: #e2ddbe;
+    letter-spacing: normal;
+}
+
+.container-cad p {
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding-bottom: 100px;
+}
+
+.container-cad p a {
+    font-weight: bold;
+    color: #222224;
+    padding-left: 10px;
+}
+
+.cad .final {
+    color: #000000;
+}
+
+.cad .final a {
+    color: #000000;
+}

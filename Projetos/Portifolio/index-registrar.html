@@ -9,10 +9,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Login</title>
+    <title>Registrar-set</title>
 </head>
 
-<body class="login">
+<body class="cad">
     <header class="header">
         <section class="navbar">
             <a href="#" class="Logo">
@@ -41,26 +41,42 @@
         </section>
     </header>
 
-    <section class="container-login">
+    <section class="container-cad">
         <form>
-            <h1>Fazer Login</h1>
-            <h2>Email</h2>
+            <h1>Cadastre-se</h1>
+            <h2>NOME COMPLETO</h2>
             <div class="text-box">
-                <input class="email" placeholder="Email" type="email" id="email">
+                <input placeholder="ex.: João Paulo" type="text">
             </div>
-            <h2>Senha</h2>
+
+            <h2>EMAIL</h2>
             <div class="text-box">
-                <input class="password" placeholder="Senha" type="password" id="senha">
+                <input class="email" placeholder="ex.:joãopualo18@gmail.com" type="email" id="email">
+            </div>
+
+            <h2>TELEFONE (OPICIONAL)</h2>
+            <div class="text-box">
+                <input placeholder="ex.:1191234-5678" type="number">
+            </div>
+
+            <h2>SENHA</h2>
+            <div class="text-box">
+                <input class="password" placeholder="Palavra-Chave" type="password" id="senha">
                 <i class="fa-solid fa-eye toggleSenha"></i>
             </div>
 
-            <a class="esqueci-link" href="#">Esqueceu minha senha</a>
-            <br>
-            <button class="btn" id="entrar">INICIAR SESSÃO</button>
+            <h2>CONFIRMAR SENHA</h2>
+            <div class="text-box">
+                <input class="password" placeholder="Confirme a Palavra-Chave" type="password" id="senha">
+                <i class="fa-solid fa-eye toggleSenha"></i>
+            </div>
+            <button class="btn" id="entrar">Cadastrar-se</button>
 
-            <p>Não possui uma conta? <a href="/index-registrar.html">Cadastre-se</a></p>
+            <p>Já possui uma conta? <a href="index-login.html">Iniciar sessão</a></p>
         </form>
     </section>
+
+
 
     <section class="creditos" id="pagina-login">
         <div class="cont">
@@ -122,6 +138,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="final">
         <div class="feito-por">
