@@ -9,7 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Registrar-set</title>
+    <title>Registrar-se</title>
 </head>
 
 <body class="cad">
@@ -61,18 +61,20 @@
 
             <h2>SENHA</h2>
             <div class="text-box">
-                <input class="password" placeholder="Palavra-Chave" type="password" id="senha">
+                <input class="password" placeholder="Palavra-Chave" type="password" id="senha" required>
                 <i class="fa-solid fa-eye toggleSenha"></i>
             </div>
 
             <h2>CONFIRMAR SENHA</h2>
             <div class="text-box">
-                <input class="password" placeholder="Confirme a Palavra-Chave" type="password" id="senha">
+                <input class="password" placeholder="Confirme a Palavra-Chave" type="password" id="confirmarSenha">
                 <i class="fa-solid fa-eye toggleSenha"></i>
+                <span id="erroSenha">As senhas não conferem!</span>
             </div>
-            <button class="btn" id="entrar">Cadastrar-se</button>
+            <button class="btn" type="submit" id="btnCadastrar" disabled>Cadastrar-se</button>
 
             <p>Já possui uma conta? <a href="index-login.html">Iniciar sessão</a></p>
+            
         </form>
     </section>
 

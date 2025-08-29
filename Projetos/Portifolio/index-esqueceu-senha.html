@@ -8,11 +8,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
     <title>Login</title>
 </head>
 
-<body class="login">
+<body class="esqueci">
     <header class="header">
         <section class="navbar">
             <a href="#" class="Logo">
@@ -41,24 +49,15 @@
         </section>
     </header>
 
-    <section class="container-login">
+    <section class="container-esqueci">
         <form>
-            <h1>Fazer Login</h1>
+            <h1>Mudar Senha</h1>
             <h2>Email</h2>
             <div class="text-box">
                 <input class="email" placeholder="Email" type="email" id="email">
             </div>
-            <h2>Senha</h2>
-            <div class="text-box">
-                <input class="password" placeholder="Senha" type="password" id="senha">
-                <i class="fa-solid fa-eye toggleSenha"></i>
-            </div>
-
-            <a class="esqueci-link" href="index-esqueceu-senha.html">Esqueceu minha senha</a>
-            <br>
-            <button class="btn" id="entrar">INICIAR SESSÃO</button>
-
-            <p>Não possui uma conta? <a href="/index-registrar.html">Cadastre-se</a></p>
+            <div class="g-recaptcha" data-sitekey="6Ld8nLcrAAAAACFCtOa-bYwAc6AoewkPjzCQc7qV"></div>
+            <input id="btn" class="btn" type="submit" value="Cadastrar">
         </form>
     </section>
 
@@ -131,8 +130,6 @@
             <p>Copyright LPS GRAVATAS - 12.345.678/0001-90 - 2025. Todos os direitos reservados.</p>
         </div>
     </section>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

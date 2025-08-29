@@ -45,6 +45,11 @@ input {
     font-size: 17px;
 }
 
+.text-box i:hover {
+    color: #007bff;
+}
+
+
 /*Parte superior fixa*/
 .header {
     position: fixed;
@@ -359,7 +364,7 @@ body.login {
 
 .text-box {
     position: relative;
-    width: 100%;         
+    width: 100%;
     max-width: 300px;
 }
 
@@ -375,15 +380,15 @@ body.login {
     transition: border-color 0.3s;
 }
 
-.text-box input:focus {
+.container-login .text-box input:focus {
     border-color: #007bff;
 }
 
-.text-box input.valid {
+.container-login .text-box input.valid {
     border-color: #007bff;
 }
 
-.text-box input.invalid{
+.container-login .text-box input.invalid {
     border-color: red;
 }
 
@@ -398,22 +403,6 @@ body.login {
     cursor: pointer;
     user-select: none;
     transition: color 0.3s ease;
-}
-
-.text-box i:hover {
-    color: #007bff;
-}
-
-.container-cad .text-box input.error {
-    border-color: red;
-}
-
-.container-cad .text-box input:focus {
-    border-color: #007bff;
-}
-
-.container-cad .text-box i:hover {
-    color: #007bff;
 }
 
 .container-login .esqueci-link {
@@ -507,6 +496,7 @@ body.cad {
     margin-bottom: 30px;
 
 }
+
 .container-cad .text-box i {
     position: absolute;
     overflow: visible;
@@ -556,4 +546,100 @@ body.cad {
 
 .cad .final a {
     color: #000000;
+}
+
+.container-cad .text-box input:focus {
+    border-color: #007bff;
+}
+
+.container-cad .text-box input.valid {
+    border-color: #007bff;
+}
+
+.container-cad .text-box input.invalid {
+    border-color: red;
+}
+
+#erroSenha {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+
+/*Esqueceu-senha*/
+
+body.esqueci ::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.esqueci {
+    background: #fff;
+}
+
+.container-esqueci {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    color: #000000;
+    margin-top: 15rem;
+}
+
+.container-esqueci h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.container-esqueci h2 {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.container-esqueci .text-box input {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 70rem;
+    height: 60px;
+    border: 2px solid #6c6c6c;
+    outline: none;
+    padding-left: 20px;
+    transition: border-color 0.3s;
+}
+
+.container-esqueci .text-box input:focus {
+    border-color: #007bff;
+}
+
+.container-esqueci .text-box input.valid {
+    border-color: #007bff;
+}
+
+.container-esqueci .text-box input.invalid {
+    border-color: red;
+}
+
+.container-esqueci .text-box .email {
+    margin-bottom: 15px;
+}
+
+
+#btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 71.3rem;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.container-esqueci .btn:hover {
+    background: #e2ddbe;
+    letter-spacing: normal;
 }
