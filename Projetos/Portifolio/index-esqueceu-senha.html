@@ -11,12 +11,17 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
   var onloadCallback = function() {
-    alert("grecaptcha is ready!");
   };
 </script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async defer>
 </script>
+<script>
+        function mostrarBotao() {
+            // Mostra o botão somente quando o reCAPTCHA for validado
+            document.getElementById("Enviar").style.display = "block";
+        }
+    </script>
     <title>Login</title>
 </head>
 
@@ -57,7 +62,7 @@
                 <input class="email" placeholder="Email" type="email" id="email">
             </div>
             <div class="g-recaptcha" data-sitekey="6Ld8nLcrAAAAACFCtOa-bYwAc6AoewkPjzCQc7qV"></div>
-            <input id="btn" class="btn" type="submit" value="Cadastrar">
+            <button id="Enviar" class="btn" type="submit">Enviar</button>
         </form>
     </section>
 
@@ -130,6 +135,12 @@
             <p>Copyright LPS GRAVATAS - 12.345.678/0001-90 - 2025. Todos os direitos reservados.</p>
         </div>
     </section>
+    <section class="whatss-logo">
+        <a href="https://api.whatsapp.com/send/?phone=5511983273207&text&type=phone_number&app_absent=0"
+            target="_blank"><img width="64" height="64" src="https://img.icons8.com/cotton/64/whatsapp--v4.png"
+                alt="whatsapp--v4" /></a>
+    </section>
+    
 </body>
 
 </html>
