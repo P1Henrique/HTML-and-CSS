@@ -3,146 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação de Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Produtos com Filtro</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Container principal */
+        .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
+            gap: 20px;
+            padding: 20px;
         }
 
-        .input-box {
-            position: relative;
-            width: 300px;
-            margin-bottom: 15px;
-        }
-
-        .input-box input {
-            width: 100%;
-            padding: 12px 40px 12px 12px;
-            border: 2px solid #ccc;
+        /* Filtro lateral */
+        .filtro {
+            width: 250px;
+            background-color: #fff;
+            padding: 15px;
             border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
         }
 
-        /* Ícone do olho */
-        .input-box i {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
+        .filtro h2 {
+            margin-bottom: 15px;
             font-size: 18px;
-            color: #555;
+            color: #333;
+        }
+
+        .filtro label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* Área dos produtos */
+        .produtos {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        /* Estilo dos cards de produto */
+        .produto {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s;
             cursor: pointer;
-            transition: color 0.3s ease;
         }
 
-        .input-box i:hover {
-            color: #007bff;
+        .produto:hover {
+            transform: scale(1.05);
         }
 
-        /* Estilo quando inválido */
-        .invalid {
-            border-color: red !important;
-        }
-
-        /* Estilo quando válido */
-        .valid {
-            border-color: green !important;
-        }
-
-        button {
+        .produto img {
             width: 100%;
-            padding: 10px;
-            border: none;
             border-radius: 6px;
+        }
+
+        .produto h3 {
+            margin: 10px 0 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .produto p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .produto button {
+            margin-top: 10px;
             background-color: #007bff;
             color: white;
-            font-size: 16px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        button:hover {
+        .produto button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div>
-        <div class="input-box">
-            <input type="email" id="email" placeholder="Digite seu e-mail">
+    <div class="container">
+        <!-- Filtro lateral -->
+        <div class="filtro">
+            <h2>Filtros</h2>
+            <label><input type="checkbox"> Camisetas</label>
+            <label><input type="checkbox"> Calças</label>
+            <label><input type="checkbox"> Tênis</label>
+            <label><input type="checkbox"> Acessórios</label>
+            <hr>
+            <label><input type="checkbox"> Promoções</label>
+            <label><input type="checkbox"> Novidades</label>
         </div>
 
-        <div class="input-box">
-            <input type="password" id="senha" placeholder="Digite sua senha">
-            <i class="fa-solid fa-eye" id="toggleSenha"></i>
+        <!-- Área dos produtos -->
+        <div class="produtos">
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Produto">
+                <h3>Produto 1</h3>
+                <p>R$ 99,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Produto">
+                <h3>Produto 2</h3>
+                <p>R$ 129,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Produto">
+                <h3>Produto 3</h3>
+                <p>R$ 89,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Produto">
+                <h3>Produto 4</h3>
+                <p>R$ 149,90</p>
+                <button>Comprar</button>
+            </div>
         </div>
-
-        <button id="entrar">Entrar</button>
     </div>
-
-    <script>
-        const emailInput = document.getElementById("email");
-        const senhaInput = document.getElementById("senha");
-        const toggleSenha = document.getElementById("toggleSenha");
-        const entrarBtn = document.getElementById("entrar");
-
-        // Regex para validar e-mail
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-        // Regex para senha (mínimo 6 caracteres, pelo menos 1 número e 1 letra)
-        const senhaRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-
-        // Mostrar / ocultar senha
-        toggleSenha.addEventListener("click", () => {
-            if (senhaInput.type === "password") {
-                senhaInput.type = "text";
-                toggleSenha.classList.remove("fa-eye");
-                toggleSenha.classList.add("fa-eye-slash");
-            } else {
-                senhaInput.type = "password";
-                toggleSenha.classList.remove("fa-eye-slash");
-                toggleSenha.classList.add("fa-eye");
-            }
-        });
-
-        // Validação em tempo real para o e-mail
-        emailInput.addEventListener("input", () => {
-            if (emailRegex.test(emailInput.value)) {
-                emailInput.classList.add("valid");
-                emailInput.classList.remove("invalid");
-            } else {
-                emailInput.classList.add("invalid");
-                emailInput.classList.remove("valid");
-            }
-        });
-
-        // Validação em tempo real para a senha
-        senhaInput.addEventListener("input", () => {
-            if (senhaRegex.test(senhaInput.value)) {
-                senhaInput.classList.add("valid");
-                senhaInput.classList.remove("invalid");
-            } else {
-                senhaInput.classList.add("invalid");
-                senhaInput.classList.remove("valid");
-            }
-        });
-
-        // Impedir envio se os campos estiverem inválidos
-        entrarBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            if (!emailRegex.test(emailInput.value) || !senhaRegex.test(senhaInput.value)) {
-                alert("Por favor, preencha os campos corretamente.");
-            } else {
-                alert("Login realizado com sucesso!");
-            }
-        });
-    </script>
 </body>
 </html>

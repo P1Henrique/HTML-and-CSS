@@ -640,11 +640,11 @@ body.esqueci {
 }
 
 #continuar:disabled {
-            background-color: var(--amarelinho);
-            cursor: not-allowed;
-        }
+    background-color: var(--amarelinho);
+    cursor: not-allowed;
+}
 
-.g-recaptcha{
+.g-recaptcha {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -659,25 +659,80 @@ body.esqueci {
     letter-spacing: normal;
 }
 
-/*área de produtos*/
+
+/*Container principal de produtos*/ 
 body.colecao {
+    display: flex;
     background-color: #fff;
+    gap: 20px;
+    padding: 20px;
 }
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+/*Categorias lateral*/
+
+.produtos .categoria {
+    position: absolute;
+    top: 300px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.produtos .categoria h1 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.produtos .categoria label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/*filtro lateral*/
+.produtos .filtro {
+    width: 250px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+/*área de produtos*/
 
 .produtos .container-prod {
-    display: grid;
-    align-items:center;
-    justify-content: center;
-    margin-top: 190px;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    flex: 1;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 100px;
+}
+.produtos .container-prod .box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
 }
 
-.produtos .container-prod .box {
-    text-align: center;
-    border: var(--border);
-    padding: 3rem;
+.produtos .container-prod .box:hover {
+    transform: scale(1.05);
 }
+
 
 .produtos .container-prod .box h3 {
     color: #000000;
@@ -722,7 +777,6 @@ body.colecao {
 .colecao .produtos .btn1:hover {
     background-color: #dfd6a7;
 }
-
 
 
 /*área de compra*/
